@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect
-from flask_image_alchemy.storages import S3Storage
+#from flask_image_alchemy.storages import S3Storage
 from flask_sqlalchemy import SQLAlchemy
 from cloudipsp import Api, Checkout
 import os
@@ -10,8 +10,8 @@ app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 app.config['SQLALCHEMY_TRACK_MODIFICATION'] = False
 app.config['UPLOAD_FOLDER'] = 'F:\\programs\\python\\yandex\\flask\\usersImages'
 db = SQLAlchemy(app)
-storage = S3Storage()
-storage.init_app(app)
+#storage = S3Storage()
+#storage.init_app(app)
 
 @app.before_first_request
 def create_tables():
